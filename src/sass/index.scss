@@ -1,1 +1,5 @@
-@import './common';
+@import './base/common';
+@import './base/reset';
+@import './base/variables';
+@import './base/typogrphy';
+@import './layout/grids';
