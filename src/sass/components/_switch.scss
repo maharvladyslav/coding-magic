@@ -1,0 +1,31 @@
+.switch__button {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  border-radius: 11px;
+  background-color: $colorBgSwitch;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: $colorTextContrast;
+    background-image: url(../images/switch/ligth.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid $colorTextPrimary;
+    position: absolute;
+    left: 0;
+    transition-property: left, background-color;
+    transition: 0.5s ease;
+  }
+}
+.switch__button:checked {
+  &::after {
+    left: calc(100% - 20px);
+    background-color: $colorTextPrimary;
+    background-image: url(../images/switch/dark.svg);
+  }
+}

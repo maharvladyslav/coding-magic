@@ -1,0 +1,66 @@
+.header {
+  padding: 20px 0;
+}
+.header__container {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.nav {
+  flex-grow: 1;
+}
+.nav__list {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.nav__item--filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover .nav__filter {
+    display: block;
+  }
+
+  &:hover::after {
+    transform: translateY(50%);
+  }
+
+  &::after {
+    content: '';
+    width: 10px;
+    height: 5px;
+    background-image: url(../images/filter-arrow.svg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease;
+  }
+}
+
+.nav__filter {
+  display: none;
+  position: absolute;
+  padding-top: 10px;
+  top: 100%;
+  left: -50%;
+  background-color: $colorTextContrast;
+  border: 1px solid $colorTextPrimary;
+  border-top: 0;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+.filter-game__item {
+  padding: 10px 50px;
+  text-align: center;
+  &:hover {
+    background-color: $colorAccent;
+  }
+}
+
+.header__actions {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}

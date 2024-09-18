@@ -1,5 +1,9 @@
 @import './base/common';
 @import './base/reset';
+
 @import './base/variables';
+@import './base/base';
 @import './base/typogrphy';
 @import './layout/grids';
+@import './components/header';
+@import './components/switch';
