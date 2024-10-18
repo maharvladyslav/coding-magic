@@ -52,8 +52,13 @@
   overflow: hidden;
 }
 .filter-game__item {
+  display: flex;
+  justify-content: center;
+}
+.filter-game__button {
   padding: 10px 50px;
-  text-align: center;
+  flex-grow: 1;
+
   &:hover {
     background-color: $colorAccent;
   }

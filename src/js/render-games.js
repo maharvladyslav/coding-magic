@@ -15,7 +15,7 @@ const renderGames = (games, category) => {
       game =>
         `<section class="game-section">
       <div class="container">
-        <div class="${game.class}"></div>
+        <div class="${game.class}">${game.name}</div>
       </div>
       </section>`
     )
@@ -26,5 +26,15 @@ const renderGames = (games, category) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   renderGames(games, 'all');
-  console.log('hello');
 });
+
+const filter = document.querySelector('.filter-game');
+
+const handleFilter = event => {
+  const category = event.target.dataset.category;
+
+  if (event.target.tagName !== 'BUTTON') return;
+
+  renderGames(games, category);
+};
+filter.addEventListener('click', handleFilter);
