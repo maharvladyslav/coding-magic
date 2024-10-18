@@ -15,7 +15,7 @@ const renderGames = (games, category) => {
       game =>
         `<section class="game-section">
       <div class="container">
-        <div class="${game.class}">${game.name}</div>
+        <div class="${game.class}"></div>
       </div>
       </section>`
     )
